@@ -11,7 +11,6 @@ from objects import Context
 from helpers import console   
 import time
 from objects import Context
-from captcha.image import ImageCaptcha
 
 def CheckFolders():
     folderList = [

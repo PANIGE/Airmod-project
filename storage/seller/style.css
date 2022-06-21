@@ -2,35 +2,134 @@ html {
     scroll-behavior: smooth;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
-    background: #F5F5F5 ;
+body {
+    background: #F5F5F5;
     color: #000000;
     height: 100%;
     overflow-x: hidden;
     font-family: Helvetica;
 }
 
-.header{
+.header {
     background-color: #474747;
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     padding: 25px;
 }
 
-.header p{
+.header p {
     color: #FFFFFF;
 }
 
-.header span{
+.header span {
     color: #FF8133;
 }
 
-.nav{
+.content {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.galerie {
+    background: #474747;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 0;
+    padding: 200px 20px 20px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.galerie div {
+    background: #F5F5F5;
+    padding: 10px 20px;
+    color: #000000;
+    font-size: 18px;
+    border-radius: 40px;
+}
+
+.galerie div span {
+    font-size: 24px;
+}
+
+.description {
+    background: #FFFFFF;
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 0;
+    color: #000000;
+}
+
+.description p,
+div {
+    padding: 10px 10px 10px 10px;
+    font-size: 18px;
+}
+
+.description h2,
+i {
+    padding: 10px 10px 10px 10px;
+    font-size: 24px;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.stat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+fieldset {
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0px 5px 20px 5px rgb(0, 0, 0, 0.2);
+}
+
+legend {
+    color: #157A6E;
+    margin: 10px;
+    font-size: 24px;
+}
+
+.shadow {
+    padding: 0;
+    box-shadow: 0px 0px 20px 10px rgb(0, 0, 0, 0.2);
+    margin: 25px;
+    border-radius: 10px;
+}
+
+.h1 {
+    padding: 20px;
+    font-size: 24px;
+}
+
+.horaire span {
+    font-size: 18px;
+}
+
+.horaire {
+    background-color: #474747;
+    color: #FFFFFF;
+}
+
+.nav {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -39,10 +138,9 @@ body{
     text-align: center;
     font-size: 24px;
     padding: 25px;
-    
 }
 
-.nav ul{
+.nav ul {
     list-style-type: none;
     display: inline;
     margin: 0px;
@@ -51,7 +149,7 @@ body{
     justify-content: space-evenly;
 }
 
-.nav i{
+.nav i {
     color: #FFFFFF;
-    font-size: 60px ;
+    font-size: 30px;
 }
