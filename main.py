@@ -1,7 +1,9 @@
+from multiprocessing import context
 from multiprocessing.sharedctypes import Value
 import os
 import sys
 from multiprocessing.pool import ThreadPool
+import traceback
 import tornado.gen
 import tornado.httpserver
 import tornado.ioloop
@@ -81,6 +83,13 @@ if __name__ == "__main__":
 
         logging.getLogger('tornado.access').disabled = True
         threading.Thread(target=lambda:generalHelper.SideLoops()).start() #Run side tasks
+
+
+
+
+
+
+        
         Context.app.listen(serverPort)
         tornado.ioloop.IOLoop.instance().start()
         

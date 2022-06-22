@@ -17,17 +17,25 @@ body {
 
 .header {
     background-color: #474747;
-    text-align: center;
-    font-size: 30px;
-    padding: 25px;
+    font-size: 4.5vw;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .header p {
     color: #FFFFFF;
+    padding: 10px;
 }
 
 .header span {
     color: #FF8133;
+}
+
+.header img {
+    width: 50px;
 }
 
 .content {
@@ -44,24 +52,25 @@ div {
     background: #474747;
     border-radius: 10px 10px 0px 0px;
     margin-bottom: 0;
-    padding: 200px 20px 20px 20px;
+    padding: 100px 10px 10px 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     color: #FFFFFF;
-    font-size: 18px;
+    font-size: 3vw;
+    align-items: center;
 }
 
 .galerie div {
     background: #F5F5F5;
     padding: 10px 20px;
     color: #000000;
-    font-size: 18px;
+    font-size: 3vw;
     border-radius: 40px;
 }
 
 .galerie div span {
-    font-size: 24px;
+    font-size: 3.5vw;
 }
 
 .description {
@@ -73,14 +82,13 @@ div {
 
 .description p,
 div {
-    padding: 10px 10px 10px 10px;
-    font-size: 18px;
+    padding: 5px;
+    font-size: 3vw;
 }
 
-.description h2,
-i {
-    padding: 10px 10px 10px 10px;
-    font-size: 24px;
+.description h2 {
+    padding: 5px;
+    font-size: 3.5vw;
 }
 
 .tags {
@@ -103,30 +111,153 @@ fieldset {
 }
 
 legend {
-    color: #157A6E;
+    color: #FFFFFF;
     margin: 10px;
-    font-size: 24px;
+    font-size: 3.5vw;
+    background-color: #2EDCC7;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.statistiques {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.statistiques p {
+    color: #FF8133;
 }
 
 .shadow {
     padding: 0;
     box-shadow: 0px 0px 20px 10px rgb(0, 0, 0, 0.2);
-    margin: 25px;
+    margin: 10px;
     border-radius: 10px;
 }
 
 .h1 {
-    padding: 20px;
-    font-size: 24px;
+    padding: 10px;
+    font-size: 3.5vw;
+}
+
+.map {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .horaire span {
-    font-size: 18px;
+    font-size: 3vw;
 }
 
-.horaire {
+.table {
+    margin-right: auto;
+    margin-left: auto;
+    border-collapse: collapse;
+    /* box-shadow: 0px 0px 20px 10px rgb(0, 0, 0, 0.2); */
+    border-radius: 5px;
+    background-color: #F5F5F5;
+}
+
+.horaire th:first-child {
+    border-radius: 5px 0px 0px 0px;
+}
+
+.horaire th:last-child {
+    border-radius: 0px 5px 0px 0px;
+}
+
+.horaire th {
     background-color: #474747;
     color: #FFFFFF;
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+    border: 0;
+}
+
+.matin td {
+    text-align: center;
+    padding: 5px;
+    color: #FF8133;
+}
+
+.aprem td {
+    text-align: center;
+    padding: 5px;
+    color: #FF8133;
+}
+
+.open {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 4.5vw;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    bottom: 5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #8AD534;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.info {
+    box-shadow: 0px 0px 20px 10px rgb(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: #ffffff;
 }
 
 .nav {
@@ -136,8 +267,8 @@ legend {
     right: 0;
     background-color: #474747;
     text-align: center;
-    font-size: 24px;
-    padding: 25px;
+    font-size: 3.5vw;
+    padding: 10px;
 }
 
 .nav ul {
@@ -151,5 +282,5 @@ legend {
 
 .nav i {
     color: #FFFFFF;
-    font-size: 30px;
+    font-size: 4.5vw;
 }
