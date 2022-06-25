@@ -44,7 +44,7 @@ class Db:
         return c
 
     def execute(self, request, *args):
-
+        print('aaa')
         console.debug(f"sql Execute : {request}" % args)
         con = self.cnx.get_connection()
         cur = con.cursor(dictionary=True, buffered=True)

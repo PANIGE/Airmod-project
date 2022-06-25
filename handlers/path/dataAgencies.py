@@ -21,6 +21,10 @@ class Handler(requestsManager.asyncRequestHandler):
     def asyncGet(self, agencyID):
         data = Context.mysql.fetch("SELECT name, type, description, adresse FROM agencies WHERE id = %s", agencyID)
         if data is None: data = {}
+        data["banner"] = "https://t3.ftcdn.net/jpg/03/02/04/06/360_F_302040655_IEH9RyDlu7LL8YCLjgL1IskhrpOlmlSv.jpg"
+
+        sc = Context.mysql.fetchAll("SELECT * FROM agency_schedules WHERE AgencyID = %s", agencyID)
+        data["schedules"] = sc
         self.set_header("Content-type", "Application/JSON")
         self.write(json.dumps(data, sort_keys=True, indent=4))
         

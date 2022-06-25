@@ -50,8 +50,18 @@ class asyncRequestHandler(tornado.web.RequestHandler):
 		if not self._finished:
 			self.finish()
 	
-	def ParseBody(self):
-		bodyType = self.request.headers.get("Content-Type", "Application/Octet-Stream")
+	def redirect(self, path):
+		self.set_status(302)
+		self.set_header("Location", path)
+
+	def isLoggedIn(self):
+		Auth = self.get_secure_cookie("Authorization")
+		id = Context.mysql.fetch("Select uid from tokens where token = %s", Auth)
+		if id is None:
+			return False
+		else:
+			return True
+		
 
 def runBackground(data, callback):
 	"""

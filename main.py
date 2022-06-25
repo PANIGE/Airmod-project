@@ -84,12 +84,14 @@ if __name__ == "__main__":
         logging.getLogger('tornado.access').disabled = True
         threading.Thread(target=lambda:generalHelper.SideLoops()).start() #Run side tasks
 
+        # Set Secure cookies with some encryption
+        if (not os.path.isfile(".data/secret.key")):
+            with open(".data/secret.key", 'w') as f:
+                f.write(generalHelper.randomString(4096))
+        with open(".data/secret.key", 'r') as f:
+            Context.app.settings["cookie_secret"] = f.read()
 
-
-
-
-
-        
+            
         Context.app.listen(serverPort)
         tornado.ioloop.IOLoop.instance().start()
         

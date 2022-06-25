@@ -28,7 +28,7 @@ def stringToBool(string:str)->bool:
 
 def randomString(length:int=8)->string:
     out = str()
-    for i in range(length):
+    for _ in range(length):
         out += random.choice(string.ascii_letters + string.digits)
     return out
 
