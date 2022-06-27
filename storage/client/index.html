@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>accueil client</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-      <script src="https://kit.fontawesome.com/cd6b6fe4f8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cd6b6fe4f8.js" crossorigin="anonymous"></script>
+
+    <script>
+        function Search() {
+            let val = $("input.search").val
+            $.getJSON('/search?q=' + val, function(data) {
+                data.forEach(s => {
+                    $.getJSON("/agency/" + s.id, function(dd) {
+                        console.log(dd)
+                    })
+                });
+            });
+        }
+    </script>
 </head>
+
 <body>
     <div class="header">
         <img src="/storage/assets/logo.png" alt="logo">
@@ -17,61 +31,61 @@
             AIRMOD<span> APP</span>
         </p>
     </div>
-    
+
     <div class="allbox">
         <div class="boxSearchTag">
-        <div class="boxContainer">
-            <table class="elementsContainer">
-                <tr>
-                    <td>
-                        <input type="text" placeholder="Search..." class="search">
-                    </td>
-                    <td>
-                        <a href="#"><span class="material-icons">search</span></a>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="tag">
-            <a href="#"><span class="material-icons">local_offer</span></a>
-        </div>
+            <div class="boxContainer">
+                <table class="elementsContainer">
+                    <tr>
+                        <td>
+                            <input type="text" placeholder="Search..." class="search" onkeyup="Search()">
+                        </td>
+                        <td>
+                            <a href="#"><span class="material-icons">search</span></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tag">
+                <a href="#"><span class="material-icons">local_offer</span></a>
+            </div>
         </div>
         <div class="boxtag">
             <span>jenferpjgfne</span>
         </div>
     </div>
-    
+
     <section>
 
-   
+
         <div id="commerces">
 
-            <div class="commerce"> 
-                    <div class="picture">
-                        <img src="/storage/assets/Commerce2.jpg" alt="image du commerce"/>
-                        
-                    </div>
-                    <div class="description">
+            <div class="commerce">
+                <div class="picture">
+                    <img src="/storage/assets/Commerce2.jpg" alt="image du commerce" />
+
+                </div>
+                <div class="description">
+                    <div>
+                        <span>la petite epicerie</span>
                         <div>
-                            <span>la petite epicerie</span>
-                            <div>
-                                <i class="fa-regular fa-clock"></i>
-                                <span id="time">0</span>
-                                <span> min</span>
-                            </div>
-                        </div>                        
-                        <div> 
-                            <p>description</p>
+                            <i class="fa-regular fa-clock"></i>
+                            <span id="time">0</span>
+                            <span> min</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p>description</p>
+                    </div>
+
+                    <div>
+                        <div>
+                            <span id="metre">0</span><span>m</span>
                         </div>
 
-                        <div>
-                            <div>
-                                <span id="metre">0</span><span>m</span>
-                            </div>
- 
-                            <i class="fa-solid fa-qrcode"></i>
-                        </div>
+                        <i class="fa-solid fa-qrcode"></i>
                     </div>
+                </div>
             </div>
 
         </div>
@@ -108,7 +122,7 @@
 
         </div> -->
 
-        
+
     </section>
     </div>
     <div class="nav">
@@ -118,6 +132,7 @@
             <li> <i class="fa-solid fa-user"></i> </li>
         </ul>
     </div>
-    
+
 </body>
+
 </html>

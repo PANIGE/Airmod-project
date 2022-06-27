@@ -54,6 +54,7 @@ class asyncRequestHandler(tornado.web.RequestHandler):
 		self.set_status(302)
 		self.set_header("Location", path)
 
+	@property
 	def isLoggedIn(self):
 		Auth = self.get_secure_cookie("Authorization")
 		id = Context.mysql.fetch("Select uid from tokens where token = %s", Auth)
@@ -61,6 +62,13 @@ class asyncRequestHandler(tornado.web.RequestHandler):
 			return False
 		else:
 			return True
+	
+	@property
+	def userContext(self):
+		if not self.isLoggedIn:
+			return None
+		else:
+			return Context.mysql.fetch("SELECT u.id, u.username, u.first_name, u.last_name, u.email, u.type FROM airmod.tokens t join users u on t.uid = u.id where t.token = %s;", self.get_secure_cookie("Authorization"))
 		
 
 def runBackground(data, callback):

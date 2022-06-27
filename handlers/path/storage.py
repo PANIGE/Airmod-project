@@ -32,7 +32,8 @@ class Handler(requestsManager.asyncRequestHandler):
             # Output
             filetype = path.split(".")
             filetype = filetype[len(filetype)-1]
-            print(filetype)
+            if Context.debug:
+                self.set_header("Cache-Control", "no-cache")
 
             if filetype in ["mp4","webm","avi", "ogg"]:
                 self.set_header("Content-type", "video/{}".format(filetype))
