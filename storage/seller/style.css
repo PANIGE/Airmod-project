@@ -385,7 +385,7 @@ input:checked+.slider:before {
 .big_container {
     padding-top: 2vw;
     padding-bottom: 2vw;
-    background-color: #F5F5F5;
+    background-color: #FFFFFF;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -396,6 +396,15 @@ input:checked+.slider:before {
     font-weight: bold;
     font-size: 6vw;
     color: #157A6E;
+}
+
+#qrcode_create {
+    margin-left: auto;
+    margin-right: auto;
+    height: 50vw;
+    width: 50vw;
+    border-radius: 10px;
+    background-color: #474747;
 }
 
 #button_valide {
@@ -420,4 +429,78 @@ input:checked+.slider:before {
     text-align: center;
     font-weight: bold;
     margin: 5px;
+}
+
+.nb_articles {
+    font-size: 10vw;
+    width: 80vw;
+    height: 15vw;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.nb_articles div {
+    font-size: 20px;
+}
+
+.nb_articles span {
+    color: orange;
+}
+
+.nb_articles input {
+    width: 20vw;
+    height: 8vw;
+}
+
+.nb_articles input {
+    width: 30vw;
+    height: 8vw;
+    border-radius: 10px;
+    border: none;
+}
+
+.nb_articles input:focus {
+    width: 30vw;
+    height: 8vw;
+    border-radius: 10px;
+    outline: none;
+}
+
+.total_price {
+    border-radius: 10px;
+    width: 80vw;
+    height: 15vw;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.total_price div {
+    font-size: 20px;
+}
+
+.total_price input {
+    width: 30vw;
+    height: 8vw;
+    border-radius: 10px;
+    border: none;
+}
+
+.total_price input:focus {
+    width: 30vw;
+    height: 8vw;
+    border-radius: 0px;
+    outline: none;
 }
