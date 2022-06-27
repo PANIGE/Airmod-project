@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style1.css" />
+    <script
+      src="https://kit.fontawesome.com/a2c903ab43.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="shop_preview">
+      <div class="title_navbar">
+        <div class="elements">
+          <i class="fa-solid fa-arrow-left"></i>
+          <div class="app_name">
+            <span>AIRMOD</span>
+            <span>app</span>
+          </div>
+          <button id="heart">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="navbar">
+      <div class="navbar_content">
+        <i class="fa-solid fa-house"></i>
+        <i class="fa-solid fa-comment-dots"></i>
+        <i class="fa-solid fa-bars-staggered"></i>
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-user"></i>
+      </div>
+    </div>
+    <div class="shop_content">
+      <div class="contents">
+        <div class="tagsbar">
+          <button id="image_button">
+            <span>02</span>
+            <i class="fa-solid fa-images"></i>
+          </button>
+          <div class="tags">
+            <button><i class="fa-solid fa-person-running"></i></button>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+            <button><i class="fa-solid fa-bread-slice"></i></button>
+            <span>34 mètres</span>
+          </div>
+        </div>
+        <div class="shop_name">
+          <span>La petite epicerie</span>
+          <span>ouvert</span>
+        </div>
+        <div class="shop_status">cette boutique est partenaire avec Airmod</div>
+        <div class="time">
+          <i class="fa-regular fa-clock"></i>
+          <span>03 Min</span>
+        </div>
+        <div class="options">
+          <a href="#">plus d'information</a>
+          <a href="#">similaire</a>
+          <a href="#">localiser</a>
+        </div>
+        <div class="informations_container" style="visibility: hidden">
+          <span>Description de la boutique</span>
+          <div class="description">
+            Cette nouvelle boutique avec pignon sur rue, au 74 rue de la
+            Verrerie à Paris sera l'occasion de rencontrer ses collaborateurs et
+            connaître sa clientèle web.Les "épiciers" vous accueilleront dans
+            leur joli tablier, pour vous aider à trouver votre bonheur parmi les
+            fournitures mises en ventes dans des caisses en bois, et à acheter
+            au kilo.
+          </div>
+          <div class="useful_informations">
+            <span>Informations pratiques</span><br /><br />
+            <span>La boutique de La Petite Epicerie</span><br />
+            <span>06 06 06 06 06</span><br />
+            <span>74 rue de la Verrerie</span><br />
+            <span>75004</span><br />
+          </div>
+        </div>
+        <div class="map_container" style="visibility: hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21005.729058837835!2d2.413462733490364!3d48.844553092874534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67364da7623e7%3A0x7c350284f02c56d7!2sLa%20Petite%20Epicerie!5e0!3m2!1sfr!2sfr!4v1656318561923!5m2!1sfr!2sfr"
+            width="324"
+            height="400"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(".heart").click(function () {
+      $("#heart").find("i").toggleClass("fa-solid fa-heart");
+    });
+    // $(".fa-solid").click(function () {
+    //   $("#heart").find("i").toggleClass("fa-regular fa-heart");
+    // });
+  </script>
+</html>
