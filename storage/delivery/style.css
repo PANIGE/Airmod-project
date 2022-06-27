@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "SSP-Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/storage/assets/font/SourceSansPro-Bold.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "SSP-regular";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/storage/assets/font/SourceSansPro-Regular.ttf") format("opentype");
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -26,12 +40,13 @@ div {
 
 .header {
     background-color: #474747;
-    font-size: 4.5vw;
+    font-size: 6vw;
     padding: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-family: 'SSP-Bold';
 }
 
 .header p {
@@ -68,7 +83,8 @@ div {
     background-color: #474747;
     text-align: center;
     font-size: 3.5vw;
-    padding: 10px;
+    padding: 7% 3%;
+    
 }
 
 .nav ul {
@@ -82,7 +98,7 @@ div {
 
 .nav i {
     color: #FFFFFF;
-    font-size: 4.5vw;
+    font-size: 7vw;
 }
 
 .recap{
@@ -92,15 +108,23 @@ div {
     align-items: center;
 }
 
+.recap p{
+    width: 80%;
+    margin-left: 10px;
+    font-size: 13px;
+}
+
 .recap img {
     border-radius: 10px;
 }
 
 .content_recu{
-    margin: 10px;
+    margin: 20px 10px 100px 10px;
     border-radius: 10px;
     background-color: #FFFFFF;
     box-shadow: 0px 0px 20px 10px rgb(0, 0, 0, 0.2);
+    font-family: 'SSP-regular';
+  
 
 }
 .content_recu h1{
@@ -137,8 +161,7 @@ div {
 }
 
 #qrcode{
-    margin-left: auto;
-    margin-right: auto;
+    margin: 25px auto 0px auto;
     height: 75vw;
     width: 75vw;
     border-radius: 10px;
