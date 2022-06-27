@@ -14,49 +14,43 @@
     --white:white;
     --black:black;
     --font-size-m: 25px;
-    /* --SSP-regular: font-family: "SSP-Black";
-    --SSP-regular: "SSP-regular";
-    --SSP-light: "SSP-light";
-    --SSP-regular: "SSP-regular";
-    --SSP-elight: "SSP-elight";
-    --SSP-regular: "SSP-Bold"; */
 }
 
 @font-face {
     font-family: "SSP-Black";
     font-style: normal;
     font-weight: 700;
-    src: url("SourceSansPro-Black.ttf") format("opentype");
+    src: url("/storage/assets/font/SourceSansPro-Black.ttf") format("opentype");
 }
 @font-face {
     font-family: "SSP-regular";
     font-style: normal;
     font-weight: 700;
-    src: url("SourceSansPro-Regular.ttf") format("opentype");
+    src: url("/storage/assets/font/SourceSansPro-Regular.ttf") format("opentype");
 }
 @font-face {
     font-family: "SSP-light";
     font-style: normal;
     font-weight: 700;
-    src: url("SourceSansPro-Light.ttf") format("opentype");
+    src: url("/storage/assets/font/SourceSansPro-Light.ttf") format("opentype");
 }
 @font-face {
     font-family: "SSP-elight";
     font-style: normal;
     font-weight: 700;
-    src: url("SourceSansPro-ExtraLight.ttf") format("opentype");
+    src: url("/storage/assets/font/SourceSansPro-ExtraLight.ttf") format("opentype");
 }
 @font-face {
     font-family: "SSP-Bold";
     font-style: normal;
     font-weight: 700;
-    src: url("SourceSansPro-Bold.ttf") format("opentype");
+    src: url("/storage/assets/font/SourceSansPro-Bold.ttf") format("opentype");
 }
 @font-face {
     font-family: "SSP-SemiBold";
     font-style: normal;
     font-weight: 700;
-    src: url("SourceSansPro-SemiBold.ttf") format("opentype");
+    src: url("/storage/assets/font/SourceSansPro-SemiBold.ttf") format("opentype");
 }
 
 * {
@@ -68,7 +62,7 @@ body{
     position: relative;
     display:flex;
     flex-direction: column;
-    background-image: url("ressources/ae5de00a5586f854770282756c1de40f.jpg");
+    background-image: url("../../assets/Commerce2.jpg");
     background-repeat: no-repeat;
     /* background-position: ; */
     background-size: 120% auto;
@@ -78,7 +72,6 @@ body{
 .shop_preview{
     width: 100%;
     min-height: 300px;
-    
     z-index: 10;
 }
 
