@@ -15,10 +15,15 @@ body {
     font-family: Helvetica;
 }
 
-div{
+div {
     padding: 5px;
     font-size: 3vw;
 }
+
+#reader {
+    height: 85vh;
+}
+
 .header {
     background-color: #474747;
     font-size: 3vw;
@@ -35,7 +40,7 @@ div{
 }
 
 .header span {
-    color: #FF8133;
+    color: #2EDCC7;
 }
 
 .header div div {
