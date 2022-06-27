@@ -87,8 +87,7 @@ div {
     color: #000000;
 }
 
-.description p,
-div {
+.description p,div{
     padding: 5px;
     font-size: 3vw;
 }
@@ -319,8 +318,8 @@ input:checked+.slider:before {
 #qrcode{
     margin-left: auto;
     margin-right: auto;
-    height: 250px;
-    width: 250px;
+    height: 75vw;
+    width: 75vw;
     border-radius: 10px;
     background-color: #474747;
 }
@@ -331,6 +330,18 @@ input:checked+.slider:before {
     background-color: #F5F5F5;
     border-radius: 10px;
     margin: 10px;
+}
+
+.content_commande{
+    padding: 10px;
+}
+.content_commande button{
+    border-radius: 10px;
+    border: solid 1px #157A6E;
+    color: #157A6E;
+    background-color: #FFFFFF;
+    padding: 10px;
+    width: 100%;
 }
 
 .article span{
