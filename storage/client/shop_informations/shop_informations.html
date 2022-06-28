@@ -36,20 +36,20 @@
         <i class="fa-solid fa-user"></i>
       </div>
     </div>
+    <div class="tagsbar">
+      <button id="image_button">
+        <span>02</span>
+        <i class="fa-solid fa-images"></i>
+      </button>
+      <div class="tags">
+        <button><i class="fa-solid fa-bread-slice"></i></button>
+        <button><i class="fa-solid fa-bag-shopping"></i></button>
+        <button><i class="fa-solid fa-person-running"></i></button>
+        <span>34 mètres</span>
+      </div>
+    </div>
     <div class="shop_content">
       <div class="contents">
-        <div class="tagsbar">
-          <button id="image_button">
-            <span>02</span>
-            <i class="fa-solid fa-images"></i>
-          </button>
-          <div class="tags">
-            <button><i class="fa-solid fa-person-running"></i></button>
-            <button><i class="fa-solid fa-bag-shopping"></i></button>
-            <button><i class="fa-solid fa-bread-slice"></i></button>
-            <span>34 mètres</span>
-          </div>
-        </div>
         <div class="shop_name">
           <span>La petite epicerie</span>
           <span>ouvert</span>
@@ -60,9 +60,9 @@
           <span>03 Min</span>
         </div>
         <div class="options">
-          <a href="#">plus d'information</a>
-          <a href="#">similaire</a>
-          <a href="#">localiser</a>
+          <a href="javascript:show()" id="more_info">plus d'information</a>
+          <a href="#" id="similar">similaire</a>
+          <a href="#" id="locate">localiser</a>
         </div>
         <div class="informations_container" style="visibility: hidden">
           <span>Description de la boutique</span>
@@ -96,5 +96,24 @@
       </div>
     </div>
   </body>
-  <script></script>
+  <script>
+    function show() {
+      document.getElementByClass("informations_container").style.visibility =
+        "visible";
+      document.getElementByClass("map_container").style.visibility = "hidden";
+    }
+
+    let infoContainer = document.getElementByClass("informations_container");
+    let mapContainer = document.getElementByClass("informations_container");
+    let propContainer = document.getElementByClass("");
+    let moreInfo = document.getElementById("more_info");
+
+    togg1.addEventListener("click", () => {
+      if (getComputedStyle(d1).display == "none") {
+        infoContainer.style.display = "none";
+      } else {
+        d1.style.display = "block";
+      }
+    });
+  </script>
 </html>
