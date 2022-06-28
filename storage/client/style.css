@@ -68,13 +68,6 @@ body{
     justify-content: space-between;
 }
 
-
-li {
-    list-style-type: none;
-    display: inline;  
-    margin: 10px;     
-}
-
 #commerces {
     display: flex;
     flex-direction: column;
@@ -197,6 +190,7 @@ li {
     text-align: center;
     font-size: 3.5vw;
     padding: 15px;
+    
 }
 
 .nav ul {
@@ -210,5 +204,5 @@ li {
 
 .nav i {
     color: #FFFFFF;
-    font-size: 5.5vw;
+    font-size: 7vw;
 }
