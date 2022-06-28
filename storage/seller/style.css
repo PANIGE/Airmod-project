@@ -309,7 +309,8 @@ legend {
     height: 75vw;
     width: 75vw;
     border-radius: 10px;
-    background-color: #474747;
+    display: flex;
+    justify-content: center;
 }
 
 .article {

@@ -18,7 +18,7 @@ class Handler(requestsManager.asyncRequestHandler):
     @tornado.gen.engine
         
 
-    def asyncPost(self, orderID, agencyID):
+    def asyncPost(self):
         if (not self.isLoggedIn):
             return self.send_error(401)
         id = Context.mysql.fetch("INSERT INTO `airmod`.`orders` (`userid`) VALUES (%s);SELECT last_insert_id() id;", self.userContext)["id"]

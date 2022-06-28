@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>QR Code Scanner</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="stylescan.css" />
+    <script src="https://kit.fontawesome.com/f932e93f4d.js" crossorigin="anonymous"></script>
     <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="container">
-        <h1>QR Code Scanner</h1>
+      <div id="head">
+      <i class="fa-solid fa-arrow-left"></i>
+      <p>Scan</p>
+      <i class="fa-solid fa-qrcode"></i>
+      </div>
 
-        <a id="btn-scan-qr">
-            <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg">
-            <a/>
+      <div id="loading-scan">Wating for Webcam...</div>
 
-            <canvas hidden="" id="qr-canvas"></canvas>
+      <canvas hidden="" id="qr-canvas"></canvas>
 
-            <div id="qr-result" hidden="">
-                <b>Data:</b> <span id="outputData"></span>
-            </div>
+      <div id="qr-result" hidden="">
+        <b>Data:</b> <span id="outputData"></span>
+      </div>
     </div>
-
-    <script src="./src/qrCodeScanner.js"></script>
-</body>
-
+    <div class="nav">
+      <ul>
+          <a href="index.html">
+              <li><i class="fa-solid fa-house-chimney"></i> </li>
+          </a>
+          <a href="">
+              <li> <i class="fa-solid fa-list"></i> </li>
+          </a>
+          <a href="">
+              <li> <i class="fa-solid fa-user"></i> </li>
+          </a>
+          <a href="">
+              <li> <i class="fa-solid fa-location-dot"></i></li>
+          </a>
+          <a href="parametre_livreur.html">
+              <li> <i class="fa-solid fa-qrcode"></i></li>
+          </a>
+      </ul>
+  </div>
+    <script src="./qrCodeScanner.js"></script>
+  </body>
 </html>
