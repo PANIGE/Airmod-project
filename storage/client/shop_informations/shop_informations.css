@@ -364,5 +364,8 @@ button{
 }
 
 .useful_informations span:nth-child(1){
-    margin-bottom: 10%;
+    margin-bottom: 3%;
+}
+.useful_informations span{
+    display: block;
 }

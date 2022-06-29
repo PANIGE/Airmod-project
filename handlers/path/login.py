@@ -13,6 +13,7 @@ from helpers import console
 from handlers.WebRegister import WebRegister
 from helpers.web import requestsManager
 from helpers import generalHelper
+import urllib.parse
 
 @WebRegister("/login") # http://4.tcp.eu.ngrok.io:10360/status
 class Handler(requestsManager.asyncRequestHandler):
