@@ -16,7 +16,7 @@
     <div class="header">
         <img src="/storage/assets/logo.png" alt="logo">
         <p>
-            AIRMOD<span> PRO</span>
+            AIRMOD SALUTATION<span> PRO</span>
         </p>
     </div>
 
@@ -33,21 +33,13 @@
                     <span>Baptiste pan</span>
                 </div>
             </div>
-        </div> 
-        <div id="qrcode" >
+        </div>
+        <div id="qrcode">
             <img src="/qrcodeGen?content=123456789.png">
         </div>
 
         <h1>numero de la commande</h1>
-        <div class="article">
-            <div>
-                <p><span>0</span> article</p>
 
-            </div>
-            <div>
-                <p>total:<span> 0€</span></p>
-            </div>
-        </div>
     </div>
 
     <div class="nav">
@@ -57,12 +49,6 @@
             <li> <i class="fa-solid fa-user"></i> </li>
         </ul>
     </div>
-    <script>
-        $. getJSON('/orders/make', function(data){
-            console.log(data.id);
-            document.getElementById("qrcode").innerHTML = '<img src="/qrcodeGen?content=987654321.png">';
-        });
-    </script>
 </body>
 
 </html>
