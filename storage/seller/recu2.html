@@ -58,8 +58,8 @@
         </ul>
     </div>
     <script>
-        console.log("ça marche");
-        $.getJSON('/orders/make', function(data){
+        $. getJSON('/orders/make', function(data){
+            console.log(data.id);
             document.getElementById("qrcode").innerHTML = '<img src="/qrcodeGen?content=987654321.png">';
         });
     </script>

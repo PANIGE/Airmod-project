@@ -22,22 +22,26 @@
                         var el = document.createElement("div")
                         base.appendChild(el)
                         el.innerHTML = `
-                        <div class="commerce">
-                            <div class="picture">
-                                <img src="`+dd.banner+`" alt="image du commerce" />
-
-                            </div>
-                            <div class="description">
-                                <div>
-                                    <span>`+dd.name+`</span>
-                                </div>
-                                <div>
-                                    <p>`+dd.description+`</p>
-                                </div>
-
+                        <fieldset class="commerce">
+                            <a style="color: inherit;display: inherit;text-decoration: inherit;" href="/storage/client/shop_informations/shop_informations.html?id=`+s.id+`">
+                                <legend>`+dd.type+`</legend>
                                 
-                            </div>
-                        </div>
+                                <div class="picture">
+                                    <img src="`+dd.banner+`" alt="image du commerce" />
+
+                                </div>
+                                <div class="description">
+                                    <div>
+                                        <p>`+dd.name+`</p>
+                                    </div>
+                                    <div maxlength="50">
+                                        <span>`+dd.description+`</span>
+                                    </div>
+
+                                    
+                                </div>
+                            </a>
+                        </fieldset>
                         `
 
                     })
@@ -70,13 +74,9 @@
                     </tr>
                 </table>
             </div>
-            <div class="tag">
-                <a href="#"><span class="material-icons">local_offer</span></a>
-            </div>
+            
         </div>
-        <div class="boxtag">
-            <span>jenferpjgfne</span>
-        </div>
+       
     </div>
 
     <section>
@@ -88,16 +88,17 @@
 
         </div>
 
-
     </section>
+    
     </div>
-    <div class="nav">
+    <fieldset class="nav">
+        <legend><button>Ajouter une commande</button></legend>
         <ul>
             <li> <i class="fa-solid fa-house-chimney"></i> </li>
             <li> <i class="fa-solid fa-list"></i> </li>
             <li> <i class="fa-solid fa-user"></i> </li>
         </ul>
-    </div>
+    </fieldset>
 
 </body>
 

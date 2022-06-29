@@ -67,6 +67,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 100px;
 
 }
 
@@ -76,6 +77,15 @@ body{
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     margin: 20px;
+}
+.commerce p{
+    font-size: 4.5vw;
+    color: #8AD534;
+    padding: 5px;
+}
+
+.commerce span{
+    font-size: 3vw;
 }
 
 .commerce:hover {
@@ -94,7 +104,6 @@ body{
 }
 
 .picture {
-    height: 120%;
     width: 100px;
     min-width: 100px;
     overflow: hidden;
@@ -109,13 +118,16 @@ body{
     padding: 10px;
 }
 
-.content_commande button {
+button {
     border-radius: 10px;
-    border: solid 1px #157A6E;
-    color: #157A6E;
-    background-color: #FFFFFF;
+    border: none;
+    color: #FFFFFF;
+    background-color: #6AA923;
     padding: 10px;
-    width: 100%;
+    position: absolute;
+    top: -50px;
+    right: 10px;
+
 }
 
 .commerce .date-project {
@@ -123,10 +135,6 @@ body{
 
 }
 
-.description span{
-    font-size: 3.5vw;
-    font-family: 'Source Sans Pro', sans-serif;
-}
 
 .description {
     display: flex;
@@ -135,13 +143,14 @@ body{
     width: 100%;
 }
 .commerce  legend{
-    background-color: #8AD534;
+    background-color: #6AA923;
     border-radius: 10px;
     padding: 0px 5px ;
     color: #F5F5F5;
     text-align: right;
     position: absolute;
     right: 0;
+    font-size: 3.5vw;
     top: -10px; 
 }
 .description div{
@@ -214,7 +223,7 @@ body{
     text-align: center;
     font-size: 3.5vw;
     padding: 15px;
-    
+    border: none;
 }
 
 .nav ul {
@@ -226,7 +235,7 @@ body{
     justify-content: space-evenly;
 }
 
-.nav i {
+.nav ul i {
     color: #FFFFFF;
     font-size: 7vw;
 }

@@ -5,55 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cd6b6fe4f8.js" crossorigin="anonymous"></script>
 
     <script>
         function Search() {
-            let val = $("input.search").val();
-            $.getJSON('/search?q=' + val, function(data) {
+            
+            $.getJSON('/orders/progress/Pending', function(data) {
                 var base = document.getElementById("commerces");
                 base.innerHTML = "";
                 data.forEach(s => {
                     $.getJSON("/agency/" + s.id, function(dd) {
                         var el = document.createElement("div")
                         base.appendChild(el)
-                        el.innerHTML = `
-                        <div class="commerce">
-                            <div class="picture">
-                                <img src="`+dd.banner+`" alt="image du commerce" />
+                        console.log(data)
+                        s.track.forEach(dd => {
+                            console.log(dd)
+                            el.innerHTML = `
+                                <div class="commerce">
+                                    <div class="picture">
+                                        <img src="`+dd.banner+`" alt="image du client" />
 
-                            </div>
-                            <div class="description">
-                                <div>
-                                    <span>`+dd.name+`</span>
+                                    </div>
+                                    <div class="description">
+                                        
+                                        <div>
+                                            <span>`+s.track.length+`  boutiques </span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p>`+dd.description+`</p>
-                                </div>
-
                                 
-                            </div>
-                        </div>
-                        `
-
-                    })
+                            `
+                        });
+                    });
                 });
             });
         }
-        window.onload = () => Search();
+    window.onload = () => Search();
     </script>
 </head>
 <body>
     <div class="header">
         <img src="/storage/assets/logo.png" alt="logo">
         <p>
-            AIRMOD<span> APP</span>
+            AIRMOD<span> delivery</span>
         </p>
     </div>
     
-    <div class="allbox">
+    <!-- <div class="allbox">
         <div class="boxSearchTag">
             <div class="boxContainer">
                 <table class="elementsContainer">
@@ -67,44 +68,16 @@
                     </tr>
                 </table>
             </div>
-            <div class="tag">
-                <a href="#"><span class="material-icons">local_offer</span></a>
-            </div>
+            
         </div>
-    </div>
+       
+    </div> -->
     
     <section>
     
     
         <div id="commerces">
-    
-            <div class="commerce">
-                <div class="picture">
-                    <img src="/storage/assets/Commerce2.jpg" alt="image du commerce" />
-    
-                </div>
-                <div class="description">
-                    <div>
-                        <span>la petite epicerie</span>
-                        <div>
-                            <i class="fa-regular fa-clock"></i>
-                            <span id="time">0</span>
-                            <span> min</span>
-                        </div>
-                    </div>
-                    <div>
-                        <p>description</p>
-                    </div>
-    
-                    <div>
-                        <div>
-                            <span id="metre">0</span><span>m</span>
-                        </div>
-    
-                        <i class="fa-solid fa-qrcode"></i>
-                    </div>
-                </div>
-            </div>
+
     
         </div>
     

@@ -29,10 +29,6 @@ body {
     font-family: 'Source Sans Pro', sans-serif; 
 }
 
-div {
-    padding: 5px;
-}
-
 .header {
     background-color: #474747;
     font-size: 4.5vw;
@@ -318,12 +314,7 @@ legend {
 .boxtag{
     padding-top: 20px;
 }
-.boxSearchTag{
-    padding-top: 1px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+
 
 #commerces {
     display: flex;
@@ -396,7 +387,6 @@ legend {
 
 
 .boxContainer {
-    width: 250px;
     height:30px;
     border: 4px solid #ffffff;
     padding:0px 10px;
