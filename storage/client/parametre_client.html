@@ -2,15 +2,16 @@
 <html lang="fr">
 
     <head>
-        <meta charset='utf_8'>
-        <title></title>
+        <meta charset='UTF-8'>
+        <title>Paramètres client</title>
         <link rel="stylesheet" href="parametre_client.css"/>
         <script src="https://kit.fontawesome.com/f73da58af1.js" crossorigin="anonymous"></script>
-        <script src="parametre_client.js"></script> 
+        <script src="script_client.js"></script> 
+        
     </head>
 
     <body>
-
+        
         <div class="header">
             <h1>Profils et Paramètres</h1>
 
@@ -18,87 +19,80 @@
 
         <div class="main">
 
-            <div class="profil">
+                <div class="profil">
 
-                <div class="visage_profil">
+                        <h1 class="nom_profil" id="nom_profil"> Emily PETIT</h1>
+                        <h2 class="age_profil" id="age_profil">28 ans</h2>
+                        <h2 class="duree_client">Cliente Airmod depuis <span > 7 mois </span></h2>
+                        <h2 class="decouvertes"> <span >37</span> Boutiques découvertes </h2>
+                        <h2 class="recompenses"> <span >11</span> Récompenses </h2>
 
-                    <img src="../images/visageclient.jpg" width="400px">
-                    <i class="fa-solid fa-square-pen"></i>
+                        <div class="modif">
+                          <div class="open-btn">
+                              <button class="open-button" onclick="openForm()"><h2 class="modifications">modifer les informations</h2></button>
+                          </div>
 
-                </div>
+                            <div class="modif-popup">
+                              <div class="form-popup" id="popupForm">
 
-                <h1 class="nom_profil">Emily, PETIT</h1>
-                <h2 class="age_profil">28 ans</h2>
-                <h2 class="duree_client">Cliente Airmod depuis <span > 7 mois </span></h3>
-                <h2 class="decouvertes"> <span >37</span> Boutiques découvertes </h3>
-                <h2 class="recompenses"> <span >11</span> Récompenses </h3>
-                <h2 class="modifier"><a  href="">modifier mes informations</a></h3>
+                                <form name="modification" class="form-container">
 
-            </div>
+                                  <label for="name">
+                                      <strong>Nom</strong>
+                                    </label>
+                                    <input type="text" id="nom" placeholder="Votre nom" name="name" value="" required/>
 
-            <div class="historic">
+                                  <label for="firstname">
+                                    <strong>Prénom</strong>
+                                  </label>
+                                  <input type="text" id="firstname" placeholder="Votre prénom" name="firstname" value="" required/>
 
-                <div class="in_historic">
+                                  <label for="username">
+                                      <strong>Nom d'utilisateur</strong>
+                                    </label>
+                                    <input type="text" id="pseudo" placeholder="Votre pseudo" name="pseudo" value="" requirede/>
 
-                    <i class="fa-solid fa-download" id="download"> </i> <h2> &ensp; Trajet enregistrés</h2> <i class="fa-solid fa-angle-right"></i>
-                    <i class="fa-solid fa-basket-shopping" id="shopping"></i> <h2> &ensp; Commandes passés</h2> <i class="fa-solid fa-angle-right"></i>
-                    <i class="fa-solid fa-person-walking" id="walking"></i> <h2> &ensp; Historique de trajet</h2> <i class="fa-solid fa-angle-right"></i>
-                
-                </div>
+                                  <label for="age">
+                                      <strong>Âge</strong>
+                                    </label>
+                                    <input type="text" id="age" placeholder="Votre age" name="age" value="" required/>
 
-            </div>
+                                  <label for="tel">
+                                      <strong>Numéro de téléphone</strong>
+                                    </label>
+                                    <input type="text" id="tel" placeholder="Votre numéro" name="tel" value="" required/>
 
-            <div class="preferences">
+                                  <label for="adresse">
+                                    <strong>Adresse</strong>
+                                  </label>
+                                  <input type="text" id="adresse" placeholder="Votre adresse" name="adresse" value="" required/>
 
-                <div class="titre_preferences">
 
-                    <h1>Préférences</h1> <i class="fa-solid fa-angle-down"></i>
-                    
-                </div>
-
-                <div class="grid_preferences">
-
-                    <h2>Thème &ensp;<span>Clair</span></h2>     
-                    
-                    <div class="switch">
-                        <div class="dflex">
-                            <div class="switch-div">
-                                <input type="checkbox" id="switch">
-                                <label for="switch"></label>
+                                  <button type="button" class="btn" onclick="confirmation();closeForm()">Confirmer</button>
+                                  <button type="button" class="cancel" onclick="closeForm()"><i class="fa-solid fa-xmark"></i></button>
+                                </form>
+                              </div>
                             </div>
                         </div>
-                    </div>
-
-                    <h2>Télécharger via wifi uniquement</h2> 
-
-                    <div class="switch2">
-                        <div class="dflex2">
-                            <div class="switch-div2">
-                                <input type="checkbox" id="switch2">
-                                <label for="switch2"></label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h2>Notifications</h2> <i class="fa-solid fa-angle-right"></i>
-
                 </div>
-
-            </div>
 
             <div class="informations">
 
                 <div class="titre_informations">
-                    <h1>Informations Personnelle</h1> <i class="fa-solid fa-angle-down"></i>
+                    <h1>Informations Personnelle</h1> 
                 </div> 
 
-                <div class="grid_informations">
 
-                    <i id="phone" class="fa-solid fa-phone"></i> <h2>Numéro de téléphone</h2> <span><h2>** ** ** ** **</h2></span>
-                    <i id="world" class="fa-solid fa-globe"></i> <h2>Langue</h2> <span> <h2>Francais (par défaut)</h2></span>
-                    <i id="adress" class="fa-solid fa-house-chimney"> </i><h2>Adresse</h2> <span> <h2>92 Bis Boulevard de la République - Noisy-le-sec - (93130) </h2></span>
+                    <div class="grid_informations">
 
-                </div>
+                        
+                        <i id="phone" class="fa-solid fa-phone"></i> <h2>Numéro de téléphone</h2> <span><h2 id="tel_profil"></h2></span>
+                        <i id="world" class="fa-solid fa-globe"></i> <h2>Langue</h2> <span> <h2 id="langue_profil">Français</h2></span>
+                        <i id="adress" class="fa-solid fa-house-chimney"> </i><h2>Adresse</h2> <span><h2 id="adresse_profil"></h2></span>
+
+                    </div>
+
+              
 
             </div>
 
