@@ -29,3 +29,7 @@ function closeForm() {
     age_profil.innerHTML = age + " ans";
     }
   }
+
+  $.getJSON('/orders/1', function(data) {
+    document.getElementById("qrcode").innerHTML = '<img src="/qrcodeGen?content=987654321.png">';
+  });
