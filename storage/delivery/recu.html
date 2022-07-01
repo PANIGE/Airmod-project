@@ -16,7 +16,7 @@
     <div class="header">
         <img src="/storage/assets/logo.png" alt="logo">
         <p>
-            AIRMOD SALUTATION<span> PRO</span>
+            AIRMOD<span> PRO</span>
         </p>
     </div>
 
@@ -39,16 +39,36 @@
         </div>
 
         <h1>numero de la commande</h1>
+        <div class="article">
+            <div>
+                <p><span>0</span> article</p>
 
+            </div>
+            <div>
+                <p>total:<span> 0€</span></p>
+            </div>
+        </div>
     </div>
 
     <div class="nav">
         <ul>
-            <li> <i class="fa-solid fa-house-chimney"></i> </li>
-            <li> <i class="fa-solid fa-list"></i> </li>
-            <li> <i class="fa-solid fa-user"></i> </li>
+            <a href="index.html">
+                <li><i class="fa-solid fa-house-chimney"></i> </li>
+            </a>
+            <a href="recu.html">
+                <li> <i class="fa-solid fa-list" style="color: #157A6E;"></i> </li>
+            </a>
+            <a href="parametre_livreur.html">
+                <li> <i class="fa-solid fa-user"></i> </li>
+            </a>
         </ul>
     </div>
+    <script>
+        $.getJSON('/orders/make', function(data) {
+            console.log(data.id);
+            document.getElementById("qrcode").innerHTML = '<img src="/qrcodeGen?content=987654321.png">';
+        });
+    </script>
 </body>
 
 </html>
