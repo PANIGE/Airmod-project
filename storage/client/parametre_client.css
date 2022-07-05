@@ -9,16 +9,22 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+.profil div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap
+}
 .header {
     background-color: #474747;
     text-align: center;
     color: white;
-    font-size: 2em;
-    padding: 40px;
+    padding: 10px;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 4.5vw;
 }
 
 
@@ -27,27 +33,26 @@ h2 {
 .profil {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 17% 17% 15% 15% 23% 10%;
+    grid-template-rows: 33% 33% 34%;
     background-color: white;
-    margin: 75px 30px 0px 30px;
+    margin: 30px 20px 0px 20px;
     box-shadow: 0 0 2em gray;
-    border-radius: 2em;
-    height: 28.125em;
-    padding: 30px;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .profil h1,
 h2 {
-    font-size: 3.5em;
+    font-size: 5.5vw;
+    padding: 10px;
 }
 
 .nom_profil {
-    margin-top: 25px;
     grid-column: 1;
 }
 
 .age_profil {
-    color: #ff8133;
+    color: #8AD534;
     grid-column: 1;
 }
 
@@ -56,7 +61,7 @@ h2 {
 }
 
 .duree_client span {
-    color: #157A6E;
+    color: #8AD534;
 }
 
 .decouvertes {
@@ -72,7 +77,7 @@ h2 {
 }
 
 .recompenses span {
-    color: #2EDCC7;
+    color: #8AD534;
 }
 
 .modifier {
@@ -80,7 +85,7 @@ h2 {
 }
 
 .modifier a {
-    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .modif {
@@ -96,68 +101,54 @@ h2 {
 }
 
 .informations h1 {
-    font-size: 3em;
-    margin: 60px 0px 0px 30px;
+    margin: 20px 0px 0 20px;
 }
 
 .grid_informations {
     display: grid;
+    align-items: center;
     grid-template-columns: 15% 40% 45%;
     grid-template-rows: auto auto auto;
     background-color: white;
-    margin: 30px 30px 30px 30px;
+    margin: 20px;
     box-shadow: 0 0 2em gray;
-    border-radius: 2em;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    border-radius: 10px;
 }
 
 .grid_informations h2 {
-    font-size: 2.5em;
     grid-column: 2;
-    padding-bottom: 50px;
-    margin-top: 10%;
-    margin-bottom: -7%;
-    margin-left: 40px;
 }
 
 .grid_informations span {
-    color: #157A6E;
+    color: #8AD534;
     margin-right: 20px;
 }
 
 .grid_informations #phone {
     grid-column: 1;
-    font-size: 4em;
-    margin-top: 35%;
+    font-size: 5.5vw;
     text-align: center;
 }
 
 .grid_informations #world {
     grid-column: 1;
-    font-size: 4em;
-    margin-top: 20%;
+    font-size: 5.5vw;
     text-align: center;
 }
 
 .grid_informations #adress {
     grid-column: 1;
-    font-size: 4em;
-    margin-top: 15%;
+    font-size: 5.5vw;
     text-align: center;
 }
 
 .informations i {
     grid-column: 2;
     font-size: 4.5em;
-    margin-top: 25%;
-    margin-left: 50px;
+    padding: 10px;
 }
 
-.informations .titre_informations {
-    display: grid;
-    grid-template-columns: 87% 13%;
-}
+
 
 .informations .titre_informations h1 {
     grid-column: 1;
@@ -165,7 +156,6 @@ h2 {
 
 .informations .titre_informations i {
     grid-column: 2;
-    margin-top: 35%;
 }
 
 
@@ -179,7 +169,7 @@ h2 {
     background-color: #474747;
     text-align: center;
     font-size: 3.5vw;
-    padding: 40px;
+    padding: 15px;
 }
 
 .nav ul {
@@ -202,22 +192,22 @@ h2 {
 .open-button {
     background-color: transparent;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    opacity: 0.8;
-    position: fixed;
     text-decoration: underline;
-    font-family: 'SSP-Bold';
-    font-size: 1.10em;
     color: black;
+    width: 100%;
+    
 }
 
 .modif-popup {
     position: relative;
-    text-align: center;
     width: 100%;
-    font-size: 2em;
-    font-family: 'SSP-Bold';
+    font-size: 4.5vw;
+}
+
+.modif-popup label{
+    margin: 5px;
+    padding: 10px;
 }
 
 .form-popup {
@@ -230,23 +220,21 @@ h2 {
 }
 
 .form-container {
-    width: 700px;
-    height: 1300px;
+    width: 80vw;
     padding: 20px;
     border: 2px solid #666;
-    border-radius: 30px;
-    font-size: 2em;
+    border-radius: 10px;
     background-color: #fff;
 }
 
 .form-container input[type="text"] {
     width: 90%;
     padding: 10px;
-    margin: 5px 0 22px 0;
+    margin: 5px;
     border: none;
     background: #eee;
     font-size: 1em;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .form-container input[type="text"]:focus {
@@ -262,9 +250,9 @@ h2 {
     cursor: pointer;
     width: 100%;
     margin-bottom: 10px;
-    opacity: 0.8;
-    font-size: 1.25em;
-    margin-top: 100px;
+    font-size: 5.5vw;
+    margin: 5px;
+    border-radius: 10px;
 }
 
 .form-container .cancel {
@@ -273,8 +261,8 @@ h2 {
     background-color: transparent;
     border: none;
     position: absolute;
-    top: -7px;
-    left: 680px;
+    top: 10px;
+    right: 20px;
 }
 
 .form-container .btn:hover,
