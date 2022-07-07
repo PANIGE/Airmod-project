@@ -5,13 +5,7 @@ const filesToCache = [
     '/storage/client/index.html',
     '/storage/client/style.css',
     '/storage/client/script_client.js',
-    '/pwathings/icon/AIRMOD APP.png',
-    '/storage/client/create_commande.html',
-    '/storage/client/parametre_client.css',
-    '/storage/client/parametre_client.html',
-    '/storage/client/recap.html',
-    '/storage/client/shop_informations.css',
-    '/storage/client/parametre_client.html'
+    '/pwathings/icon/AIRMOD APP.png'
 ];
 
 // - Un code qui s'exécute à l'installation du service worker
