@@ -5,6 +5,10 @@ const filesToCache = [
     '/storage/client/index.html',
     '/storage/client/style.css',
     '/storage/client/script_client.js',
+    '/storage/client/recap.html',
+    '/storage/client/parametre_client.html',
+    '/storage/client/parametre_client.css',
+    '/storage/assets/logo.png',
     '/pwathings/icon/AIRMOD APP.png'
 ];
 

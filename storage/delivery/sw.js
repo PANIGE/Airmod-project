@@ -5,9 +5,11 @@ const filesToCache = [
     '/storage/delivery/index.html',
     '/storage/delivery/style.css',
     '/storage/delivery/script_parametre.js',
-    '/pwathings/icon/AIRMOD DELIVERY.png',
-    '/storage/delivery/style2.css',
-    '/storage/delivery/parametre_livreur.css'
+    '/storage/delivery/recu.html',
+    '/storage/delivery/parametre_livreur.html',
+    '/storage/delivery/parametre_livreur.css',
+    '/storage/assets/logo.png',
+    '/pwathings/icon/AIRMOD DELIVERY.png'
 ];
 
 // - Un code qui s'exécute à l'installation du service worker
